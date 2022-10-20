@@ -1,6 +1,6 @@
 CC = c++
 
-FLAGS = -Wall -Wextra -Werror -std=c++98 -WShadow
+FLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow
 
 SRC = $(shell find ./src -name "*.cpp")
 

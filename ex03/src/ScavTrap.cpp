@@ -38,7 +38,7 @@ ScavTrap & ScavTrap::operator=(const ScavTrap &assign)
 //Member Functions
 void	ScavTrap::attack(const std::string& target)
 {
-	if (_ep > 0 && _hp > 0)
+	if (ScavTrap::_ep > 0 && _hp > 0)
 	{
 		std::cout 
 		<< "ScavTrap " 

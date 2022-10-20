@@ -18,8 +18,13 @@ class DiamondTrap : protected ScavTrap, protected FragTrap
 		
 		// Operators
 		DiamondTrap & operator=(const DiamondTrap &assign);
-		void	attack(std::string name);
-	
+		
+		// Member Functions
+		void			attack( std::string name );
+		void			takeDamage(unsigned int amount);
+		void			beRepaired(unsigned int amount);
+		void			whoAmI( void );
+
 	private:
 		std::string name_var;
 };

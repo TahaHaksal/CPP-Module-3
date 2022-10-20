@@ -2,7 +2,11 @@
 
 int     main()
 {
-   DiamondTrap  x("osman");
+   DiamondTrap  *x = new DiamondTrap("Osman");
 
-   // x.beRepaired(10);
+   for (int i = 0; i < 150; i++)
+   {
+      std::cout << i << " =>";
+      x->attack("Veli");
+   }
 }

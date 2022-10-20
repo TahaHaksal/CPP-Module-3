@@ -19,7 +19,7 @@ class ScavTrap : virtual public ClapTrap
 		ScavTrap & operator=(const ScavTrap &assign);
 		
 		//Member Functions
-		virtual void	attack(const std::string& target) = 0;
+		void	attack(const std::string& target);
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
 		void			guardGate();

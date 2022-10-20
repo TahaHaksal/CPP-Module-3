@@ -32,3 +32,60 @@ DiamondTrap & DiamondTrap::operator=(const DiamondTrap &assign)
 	return *this;
 }
 
+// Member functions
+
+void	DiamondTrap::attack(std::string name)
+{
+	ScavTrap::attack(name);
+	_ep--;
+}
+void	DiamondTrap::takeDamage(unsigned int amount)
+{
+	if (_hp > 0)
+	{
+		std::cout 
+		<< "DiamondTrap " 
+		<< _name 
+		<< " took " 
+		<< amount
+		<< " points of damage!"
+		<< std::endl;
+		_hp -= amount;
+	}else{
+		std::cout 
+		<<"Stop it already. It can't fight back. :'("
+		<< std::endl;
+	}
+}
+
+void	DiamondTrap::beRepaired(unsigned int amount)
+{
+	if (_ep > 0 && _hp > 0)
+	{
+		std::cout 
+		<< "DiamondTrap " 
+		<< _name 
+		<< " is healing for " 
+		<< amount
+		<< "."
+		<< std::endl;
+		_ep--;
+		_hp += amount;
+	}else{
+		std::cout 
+		<< "DiamondTrap " 
+		<< _name 
+		<< " doesn't have energy to heal. >:("
+		<< std::endl;
+	}
+}
+void	DiamondTrap::whoAmI( void )
+{
+	std::cout
+	<< "Hello my name is '"
+	<< name_var
+	<< "', and my ClapTrap name is '"
+	<< _name
+	<< "'. Nice to meet you!"
+	<< std::endl;
+}
